@@ -10,7 +10,10 @@ words = {
 
 def generateSentence(wordSelection):
     output = ''
-    output += choice(wordSelection['names']) + ' ' + choice(wordSelection['verbs']) + ' ' + choice(wordSelection['nouns']) + '.'
+    output += choice(wordSelection['names']) + ' '
+    output += choice(wordSelection['verbs']) + ' '
+    output += choice(wordSelection['nouns'])
+    output += '.'
     return(output)
 
 while True:
@@ -30,6 +33,7 @@ while True:
             print('Sorry! That isn\'t a word selection. Try one of these:')
             for i in words:
                 print('\t' + i)
+            print('END')
             continue
 
     print(generateSentence(words[userSelection.upper()]))
