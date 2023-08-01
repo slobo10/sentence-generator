@@ -1,10 +1,11 @@
-from random import choice
+from random import choice, random
 
 words = {
     'STARGATE': {
         'names': ['Jack O\'neal', 'Danel Jackson', 'Samantha Carter', 'Teal\'c', 'Gorge Hammond', 'The shevron guy'],
         'verbs': ['shot', 'searched', 'scanned', 'explored', 'blew up', 'talked to', 'ate', 'looked at', 'charted'],
-        'nouns': ['the gate', 'Earth', 'a death glider', 'the locals', 'the technology', 'the local food', 'a P-90'],
+        'ajectives': ['evil', 'crazy', 'Go\'al\'uld infested', 'cool'],
+        'nouns': [['the', 'gate'], ['', 'Earth'], ['a', 'death glider'], ['the', 'locals'], ['the', 'technology'], ['the', 'local food'], ['a', 'P-90']],
     }
 }
 
@@ -12,7 +13,11 @@ def generateSentence(wordSelection):
     output = ''
     output += choice(wordSelection['names']) + ' '
     output += choice(wordSelection['verbs']) + ' '
-    output += choice(wordSelection['nouns'])
+    noun = choice(wordSelection['nouns'])
+    output += noun[0] + ' '
+    if (random() < 1/2):
+        output += choice(wordSelection['ajectives']) + ' '
+    output += noun[1]
     output += '.'
     return(output)
 
@@ -33,7 +38,8 @@ while True:
             print('Sorry! That isn\'t a word selection. Try one of these:')
             for i in words:
                 print('\t' + i)
-            print('END')
+            print('Enter for last words')
+            print('END to end')
             continue
 
     print(generateSentence(words[userSelection.upper()]))
