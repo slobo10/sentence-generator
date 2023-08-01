@@ -9,19 +9,25 @@ words = {
         'nouns': [['the', 'gate'], ['', 'Earth'], ['a', 'death glider'], ['the', 'locals'], ['the', 'technology'], ['the', 'local food'], ['a', 'P-90']],
     }
 }
+conjunctions = [', and', ', or', ', so', ', but']
 
 def generateSentence(wordSelection):
     output = ''
-    output += choice(wordSelection['names']) + ' '
-    if (random() < 1/4):
-        output += choice(wordSelection['adverbs']) + ' '
-    output += choice(wordSelection['verbs']) + ' '
-    noun = choice(wordSelection['nouns'])
-    output += noun[0] + ' '
-    if (random() < 1/2):
-        output += choice(wordSelection['ajectives']) + ' '
-    output += noun[1]
+    while True:
+        output += choice(wordSelection['names']) + ' '
+        if (random() < 1/4):
+            output += choice(wordSelection['adverbs']) + ' '
+        output += choice(wordSelection['verbs']) + ' '
+        noun = choice(wordSelection['nouns'])
+        output += noun[0] + ' '
+        if (random() < 1/2):
+            output += choice(wordSelection['ajectives']) + ' '
+        output += noun[1]
+        if (random() > 1/2):
+            break
+        output += choice(conjunctions) + ' '
     output += '.'
+
     return(output)
 
 while True:
