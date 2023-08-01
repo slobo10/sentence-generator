@@ -3,6 +3,7 @@ from random import choice, random
 words = {
     'STARGATE': {
         'names': ['Jack O\'neal', 'Danel Jackson', 'Samantha Carter', 'Teal\'c', 'Gorge Hammond', 'The shevron guy'],
+        'adverbs': ['crazyly', 'carelessly', 'violently'],
         'verbs': ['shot', 'searched', 'scanned', 'explored', 'blew up', 'talked to', 'ate', 'looked at', 'charted'],
         'ajectives': ['evil', 'crazy', 'Go\'al\'uld infested', 'cool'],
         'nouns': [['the', 'gate'], ['', 'Earth'], ['a', 'death glider'], ['the', 'locals'], ['the', 'technology'], ['the', 'local food'], ['a', 'P-90']],
@@ -12,6 +13,8 @@ words = {
 def generateSentence(wordSelection):
     output = ''
     output += choice(wordSelection['names']) + ' '
+    if (random() < 1/4):
+        output += choice(wordSelection['adverbs']) + ' '
     output += choice(wordSelection['verbs']) + ' '
     noun = choice(wordSelection['nouns'])
     output += noun[0] + ' '
