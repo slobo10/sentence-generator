@@ -38,8 +38,8 @@ while True:
             print('Sorry! That isn\'t a word selection. Try one of these:')
             for i in words:
                 print('\t' + i)
-            print('Enter for last words')
-            print('END to end')
+            print('\tEnter for last words')
+            print('\tEND to end')
             continue
 
     print(generateSentence(words[userSelection.upper()]))
