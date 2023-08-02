@@ -19,7 +19,9 @@ def generateSentence(wordSelection):
             output += choice(wordSelection['adverbs']) + ' '
         output += choice(wordSelection['verbs']) + ' '
         noun = choice(wordSelection['nouns'])
-        output += noun[0] + ' '
+        output += noun[0]
+        if (noun[0] != ''):
+            output += ' '
         if (random() < 1/2):
             output += choice(wordSelection['ajectives']) + ' '
         output += noun[1]
