@@ -7,6 +7,13 @@ words = {
         'verbs': ['shot', 'searched', 'scanned', 'explored', 'blew up', 'talked to', 'ate', 'looked at', 'charted'],
         'ajectives': ['evil', 'crazy', 'Go\'al\'uld infested', 'cool'],
         'nouns': [['the', 'gate'], ['', 'Earth'], ['a', 'death glider'], ['the', 'locals'], ['the', 'technology'], ['the', 'local food'], ['a', 'P-90']],
+    },
+    'KERBAL SPACE PROGRAM': {
+        'names': ['Jebediah Kerman', 'Valentina Kerman', 'Bob Kerman', 'Bill Kerman'],
+        'adverbs': ['crazyly', 'carefuly', 'forcefully'],
+        'verbs': ['piloted', 'egineered', 'crashed', 'refueled', 'orbited around', 'threw into space', 'experimented on', 'blew up', 'set fire to', 'destoyed'],
+        'ajectives': ['crazy', 'unsafe', 'noninspected', 'rusty', 'freezing', 'floating'],
+        'nouns': [['', 'Kerbin'], ['', 'Duna'], ['an', 'orbiter rocket'], ['a', 'spaceplane'], ['a', 'building'], ['', 'Kerbal Space Program'], ['the', 'vehicle assembly building'], ['the', 'space plane hanger']],
     }
 }
 conjunctions = [', and', ', or', ', so', ', but']
