@@ -17,6 +17,7 @@ words = {
     }
 }
 conjunctions = [', and', ', or', ', so', ', but']
+prepositions = ['behind', 'on', 'inside of', 'under', 'next to']
 
 def generateSentence(wordSelection):
     output = ''
@@ -32,6 +33,15 @@ def generateSentence(wordSelection):
         if (random() < 1/2):
             output += choice(wordSelection['ajectives']) + ' '
         output += noun[1]
+        if (random() < 1/3):
+            noun = choice(wordSelection['nouns'])
+            output += ' ' + choice(prepositions) 
+            if (noun[0] != ''):
+                output += ' '
+            output += noun[0] + ' '
+            if (random() < 1/2):
+                output += choice(wordSelection['ajectives']) + ' '
+            output += noun[1]
         if (random() > 1/2):
             break
         output += choice(conjunctions) + ' '
