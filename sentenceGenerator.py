@@ -49,6 +49,7 @@ def generateSentence(wordSelection):
 
     return(output)
 
+userSelection = ''
 while True:
     userInput = input('Select words: ').upper()
 
@@ -70,5 +71,7 @@ while True:
             print('\tEND to end')
             continue
 
-    print(generateSentence(words[userSelection.upper()]))
-    
+    if userSelection != '':
+        print(generateSentence(words[userSelection.upper()]))
+    else:
+        print('No original word selection. Pressing enter selects last word selection, but last word selection does not exist. Please type a word selection. type \'?\' to see list of possible word selections.')
