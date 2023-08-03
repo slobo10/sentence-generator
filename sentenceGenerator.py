@@ -16,7 +16,7 @@ words = {
         'nouns': [['', 'Kerbin'], ['', 'Duna'], ['an', 'orbiter rocket'], ['a', 'spaceplane'], ['a', 'building'], ['', 'Kerbal Space Program'], ['the', 'vehicle assembly building'], ['the', 'space plane hanger']],
     }
 }
-conjunctions = [', and', ', or', ', so', ', but']
+conjunctions = [', and', ', so', ', but']
 prepositions = ['behind', 'on', 'inside of', 'under', 'next to']
 
 def generateSentence(wordSelection):
