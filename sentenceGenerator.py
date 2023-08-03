@@ -3,16 +3,16 @@ from random import choice, random
 words = {
     'STARGATE': {
         'names': ['Jack O\'neal', 'Danel Jackson', 'Samantha Carter', 'Teal\'c', 'Gorge Hammond', 'The shevron guy'],
-        'adverbs': ['crazyly', 'carelessly', 'violently'],
+        'adverbs': ['crazily', 'carelessly', 'violently'],
         'verbs': ['shot', 'searched', 'scanned', 'explored', 'blew up', 'talked to', 'ate', 'looked at', 'charted'],
-        'ajectives': ['evil', 'crazy', 'Go\'al\'uld infested', 'cool'],
+        'adjectives': ['evil', 'crazy', 'Go\'al\'uld infested', 'cool'],
         'nouns': [['the', 'gate'], ['', 'Earth'], ['a', 'death glider'], ['the', 'locals'], ['the', 'technology'], ['the', 'local food'], ['a', 'P-90']],
     },
     'KERBAL SPACE PROGRAM': {
         'names': ['Jebediah Kerman', 'Valentina Kerman', 'Bob Kerman', 'Bill Kerman'],
-        'adverbs': ['crazyly', 'carefuly', 'forcefully'],
-        'verbs': ['piloted', 'egineered', 'crashed', 'refueled', 'orbited around', 'threw into space', 'experimented on', 'blew up', 'set fire to', 'destoyed'],
-        'ajectives': ['crazy', 'unsafe', 'noninspected', 'rusty', 'freezing', 'floating'],
+        'adverbs': ['crazily', 'carefully', 'forcefully'],
+        'verbs': ['piloted', 'engineered', 'crashed', 'refueled', 'orbited around', 'threw into space', 'experimented on', 'blew up', 'set fire to', 'destroyed'],
+        'adjectives': ['crazy', 'unsafe', 'noninspected', 'rusty', 'freezing', 'floating'],
         'nouns': [['', 'Kerbin'], ['', 'Duna'], ['an', 'orbiter rocket'], ['a', 'spaceplane'], ['a', 'building'], ['', 'Kerbal Space Program'], ['the', 'vehicle assembly building'], ['the', 'space plane hanger']],
     }
 }
@@ -31,7 +31,7 @@ def generateSentence(wordSelection):
         if (noun[0] != ''):
             output += ' '
         if (random() < 1/2):
-            output += choice(wordSelection['ajectives']) + ' '
+            output += choice(wordSelection['adjectives']) + ' '
         output += noun[1]
         if (random() < 1/3):
             noun = choice(wordSelection['nouns'])
@@ -40,7 +40,7 @@ def generateSentence(wordSelection):
                 output += ' '
             output += noun[0] + ' '
             if (random() < 1/2):
-                output += choice(wordSelection['ajectives']) + ' '
+                output += choice(wordSelection['adjectives']) + ' '
             output += noun[1]
         if (random() > 1/2):
             break
