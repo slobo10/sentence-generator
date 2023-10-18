@@ -2,18 +2,18 @@ from random import choice, random
 
 words = {
     'STARGATE': {
-        'names': ['Jack O\'neal', 'Danel Jackson', 'Samantha Carter', 'Teal\'c', 'Gorge Hammond', 'The shevron guy'],
+        'names': ['Jack O\'neal', 'Daniel Jackson', 'Samantha Carter', 'Teal\'c', 'Gorge Hammond', 'The chevron guy'],
         'adverbs': ['crazily', 'carelessly', 'violently'],
         'verbs': ['shot', 'searched', 'scanned', 'explored', 'blew up', 'talked to', 'ate', 'looked at', 'charted'],
         'adjectives': ['evil', 'crazy', 'Go\'al\'uld infested', 'cool'],
         'nouns': [['the', 'gate'], ['', 'Earth'], ['a', 'death glider'], ['the', 'locals'], ['the', 'technology'], ['the', 'local food'], ['a', 'P-90']],
     },
     'KERBAL SPACE PROGRAM': {
-        'names': ['Jebediah Kerman', 'Valentina Kerman', 'Bob Kerman', 'Bill Kerman'],
+        'names': ['Jebediah Kerman', 'Valentina Kerman', 'Bob Kerman', 'Bill Kerman', 'Werner Von Kerman'],
         'adverbs': ['crazily', 'carefully', 'forcefully'],
-        'verbs': ['piloted', 'engineered', 'crashed', 'refueled', 'orbited around', 'threw into space', 'experimented on', 'blew up', 'set fire to', 'destroyed'],
+        'verbs': ['piloted', 'engineered', 'crashed onto', 'refueled', 'orbited around', 'threw into space', 'experimented on', 'blew up', 'set fire to', 'destroyed'],
         'adjectives': ['crazy', 'unsafe', 'noninspected', 'rusty', 'freezing', 'floating'],
-        'nouns': [['', 'Kerbin'], ['', 'Duna'], ['an', 'orbiter rocket'], ['a', 'spaceplane'], ['a', 'building'], ['', 'Kerbal Space Program'], ['the', 'vehicle assembly building'], ['the', 'space plane hanger']],
+        'nouns': [['', 'Kerbin'], ['', 'Duna'], ['an', 'orbiter rocket'], ['a', 'spaceplane'], ['the', 'astronaut complex'], ['', 'Kerbal Space Program'], ['the', 'vehicle assembly building'], ['the', 'space plane hanger']],
     }
 }
 conjunctions = [', and', ', so', ', but', ' when', ' after', ' before']
@@ -55,7 +55,7 @@ while True:
 
     if userInput == 'END':
         break
-    if userInput != '':
+    elif userInput != '':
         selectionExists = False
         for i in words:
             if userInput == i:
@@ -63,12 +63,16 @@ while True:
                 break
         if selectionExists:
             userSelection = userInput
+        elif userInput == '?':
+            print('Here are all the available selections:')
         else: 
-            print('Sorry! That isn\'t a word selection. Try one of these:')
+            print('Sorry! That isn\'t a word selection. Here are all the available selections:')
+
+        if not selectionExists:
             for i in words:
                 print('\t' + i)
-            print('\tEnter for last words')
-            print('\tEND to end')
+            print('\tEnter for word selection')
+            print('\tEND to end program')
             continue
 
     if userSelection != '':
