@@ -1,2 +1,2 @@
 # sentence-generator
-A Python program that can generate sentences. Simply run sentenceGenerator.py. Feel free to create pull requests to add more words.
+A Python program that can generate sentences. Simply run sentenceGenerator.py. If you can, please fork this repository and create pull requests to add more words. You can also create issues to give ideas for words.
